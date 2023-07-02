@@ -970,7 +970,7 @@ sum(case when
 sum(case when 
         l.segment in ('PRIME_PLUS', 'PRIME')
         and l.decisioning_primary_fico_score >= 680
-        and la.amount <= 50000
+        and la.amount <= 30000
         and l.apr <= .18
         and l.term in (24, 36, 48, 60, 66, 72, 84)
         and primary_details.pre_loan_dti_stated <= .40 
