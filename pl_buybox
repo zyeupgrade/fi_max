@@ -2572,7 +2572,7 @@ left join (select lr.id, cr.military_lending_account_search_status
         left join decisioning.applicant dap on d.id = dap.credit_decision_id and dap.is_primary = 'true'
         left join decisioning.credit_report cr on dap.credit_report_id = cr.id
         where lr.id is not null) MLA on MLA.id = la.loan_id
-where la.create_date::date between '2023-05-01' and '2023-05-31'
+where la.create_date::date between '2023-06-01' and '2023-06-30'
 and la.allocation_policy = 'CREDIT_UNION_1'
 and la.loan_product_type = 'PERSONAL_LOAN'
 group by extract(month from la.create_date);
