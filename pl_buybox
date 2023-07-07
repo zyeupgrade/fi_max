@@ -1,4 +1,5 @@
 select max(la.create_date) as date_,
+l.decisioning_primary_fico_score,
 sum(case when 
         l.segment in ('PRIME_PLUS', 'PRIME') 
         and l.decisioning_primary_fico_score >= 710 
